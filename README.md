@@ -1,10 +1,10 @@
 # loginnode
 ApiRest with node
 <hr>
-<b>Requirements:</b>
-  Installed (view version)
-    node -v
-    npm -v
+<b>Requirements:</b><hr>
+  Installed (view version)<hr>
+    node -v<hr>
+    npm -v<hr>
 
 0. git init
 1. Git clone https://github.com/agustinafassina/loginnode.git
