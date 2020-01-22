@@ -1,7 +1,6 @@
 # loginnode
 ApiRest with node
-<hr>
-<br>
+<br><br>
 <b>Requirements:</b><br>
   Installed (view version)<br>
     node -v<br>
