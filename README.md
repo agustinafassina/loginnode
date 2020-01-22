@@ -1,11 +1,12 @@
 # loginnode
 ApiRest with node
 <hr>
+<br>
 <b>Requirements:</b><br>
   Installed (view version)<br>
     node -v<br>
     npm -v<br>
-
+<br>
 0. git init
 1. Git clone https://github.com/agustinafassina/loginnode.git
 2. Configuration of database -> modelus/connections.js.
