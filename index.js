@@ -1,19 +1,30 @@
-var express = require('express');
-var http = require('http');
+const express = require('express');
+const bodyParser = require('body-parser');
+const router = express.Router();
+const cors = require('cors');
+const routes = require('./config/routes');
+const users = require('./controllers/users');
+var authCtrl = require('./auth/index');
+
 var app = express();
-var mysql = require('mysql');
 
-var users = ['ludmi', 'lucio', 'lara']
+app.use(bodyParser.json());
+app.use(router);
 
-app.get('/users', (req, res) => {
-    res.send('Hello :Agus')
-})
-
-app.get('/', (req, res) => {
-    res.status(200).send("Welcome to API REST")
-})
-
-http.createServer(app).listen(8005, () => {
-    console.log('Server started at http://localhost:8005');
+app.get('/', function(req, res){
+	res.send('Api funcionando');
 });
-  
+
+app.get('/version', function(req, res){
+	res.send('Api funcionando 1.0.1 sin microservicios');
+});
+
+// Rutas de autenticación y login
+//router.post('/auth/signup', auth.emailSignup);
+//router.post('/auth/login', auth.emailLogin);
+
+app.use('/apinode', routes);
+
+var server = app.listen(8001, function(){
+	console.log('Server listening on port ' + server.address().port);
+});
